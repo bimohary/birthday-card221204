@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Surprise</title>
+    <link rel="icon" href="https://cdn-icons-png.freepik.com/512/5487/5487025.png" sizes="16x16" type="image/png">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #fff, #cc7bff);
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            padding-bottom: 100%;
+            width: auto;
+            height: fit-content;
+        }
+        .card {
+            max-width: 600px;
+            background: #fff;
+            border-radius: 16px;
+            padding: 20px;
+            margin: 50px auto;
+            box-shadow: 0px 0px 16px rgba(255, 182, 193, 0.8);
+            text-align: left;
+            position: relative;
+            animation: popIn 1s ease-in-out;
+
+        }
+        @keyframes popIn {
+            0% {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        .header {
+            color: #fa2f94;
+            font-size: 28px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px #ffa3d1, 0 0 10px #ff99cc, 0 0 30px #ff66b2;
+        }
+        .subheader {
+            color: #8254c7;
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        p {
+            color: #333;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        a {
+            color: #ff66b2;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            font-size: 12px;
+            color: #777;
+            margin-top: 30px;
+            text-align: center;
+        }
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #ff66b2;
+            border-radius: 50%;
+            opacity: 0.7;
+            animation: fall 3s infinite ease-in-out;
+        }
+        @keyframes fall {
+            0% {
+                transform: translateY(-100vh) translateX(0);
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) translateX(50px);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="header">Happy Birthday, Syafira Salsabila! ✨</div>
+        <div class="subheader">22 December 2004-22 December 2024</div>
+        <div class="subheader" style="padding-bottom: 20px;">20 Years of Joy 🎈</div>
+        <img src="syafira.jpg" style="width: 100%; height: auto; object-fit: contain; border-radius: 12px; box-shadow: 0 0 10px #ffa3d1, 0 0 10px #ff99cc, 0 0 30px #ff66b2;"/>
+        <p style="padding-top: 10px;">Wishing the most charming and successful girl a day filled with love, happiness, and all the beautiful things life has to offer!</p>
+        <p>You are lucky to have real besties like Riza, Iid, and two amazing boys who care about you so much.</p>
+        <p>
+            Enjoy this beautiful moment and remember, you're cherished and loved more than words can say!
+        </p>
+        <p>
+            Here many your photos or videos with friends 😍
+        </p>
+        <video width="310px" autoplay muted loop style="width: 100%; height: auto; object-fit: contain; border-radius: 12px; box-shadow: 0 0 10px #ffa3d1, 0 0 10px #ff99cc, 0 0 30px #ff66b2;">
+            <source src="syafirariza.mp4" type="video/mp4">
+            doing tiktok dance
+        </video>        
+        <img src="syafiranjay.jpg" style="width: 100%; height: auto; object-fit: contain; border-radius: 12px; box-shadow: 0 0 10px #ffa3d1, 0 0 10px #ff99cc, 0 0 30px #ff66b2;"/>
+        <div class="footer">( Made with love and confetti just for you! ♥ )</div>
+    </div>
+
+    <script>
+        function createConfetti() {
+            const confetti = document.createElement('div');
+            confetti.classList.add('confetti');
+            confetti.style.left = Math.random() * window.innerWidth + 'px';
+            confetti.style.backgroundColor = randomColor();
+            document.body.appendChild(confetti);
+            setTimeout(() => confetti.remove(), 3000);
+        }
+
+        function randomColor() {
+            const colors = ['#ff66b2', '#8254c7', '#ffdbf4', '#f09efc', '#ff4da6'];
+            return colors[Math.floor(Math.random() * colors.length)];
+        }
+
+        setInterval(createConfetti, 200);
+    </script>
+</body>
+</html>
